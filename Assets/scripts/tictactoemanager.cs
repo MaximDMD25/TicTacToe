@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TicTacToeManager : MonoBehaviour
@@ -146,5 +147,11 @@ public class TicTacToeManager : MonoBehaviour
     {
         playertext.text = "Unentschieden";
     }
-        
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
 }
